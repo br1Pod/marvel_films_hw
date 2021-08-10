@@ -86,13 +86,30 @@
 
 
 -- The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
-SELECT show_time FROM movies WHERE title = 'Iron Man';
-SELECT show_time FROM movies WHERE title = 'Iron Man 2';
-SELECT show_time FROM movies WHERE title = 'Iron Man 3';
+-- SELECT show_time FROM movies WHERE title = 'Iron Man';
+-- SELECT show_time FROM movies WHERE title = 'Iron Man 2';
+-- SELECT show_time FROM movies WHERE title = 'Iron Man 3';
 
-UPDATE movies SET show_time = '19:00' WHERE title = 'Iron Man 2';
-UPDATE movies SET show_time = '21:00' WHERE title = 'Iron Man 3';
-SELECT * FROM movies
+-- UPDATE movies SET show_time = '19:00' WHERE title = 'Iron Man 2';
+-- UPDATE movies SET show_time = '21:00' WHERE title = 'Iron Man 3';
+-- SELECT * FROM movies
+
+
+
+-- EXTENSIONS
+-- - Return all of the films ordered by start time (will need to research ORDER BY)
+-- - Count the number of films released in each year (will need to research GROUP BY)
+
+-- SELECT title, show_time FROM movies ORDER BY show_time ASC
+SELECT year, COUNT (year) FROM movies GROUP BY year
+
+
+
+
+
+
+
+
 
 
 
